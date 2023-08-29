@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+}
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Medium-Dark-Blue: hsl(214, 19%, 24%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Green: rgb(0, 196, 0);
+  --black: #000000;
+  --radius: 15px;
+  --transition: all 0.3s ease;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 480px;
+  min-height: 80%;
+  max-height: 100%;
+  padding: 20px;
+  background-color: var(--Dark-Blue);
+}
+main .container .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 335px;
+  height: 335px;
+  background-color: var(--black);
+}
+main .container .img .buttons {
+  position: absolute;
+  width: inherit;
+  display: none;
+  z-index: 1000;
+}
+main .container .img .buttons button {
+  width: 77px;
+  height: 77px;
+  font-size: 50px;
+}
+main .container .img .buttons button span {
+  position: absolute;
+  font-size: 16px;
+  top: 30px;
+}
+main .container .img img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+main .container .img:hover img{
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  opacity: 0.3;
+}
+main .container .img:hover {
+  box-shadow: 0px 0px 30px black;
+}
+main .container .img:hover .buttons {
+  position: absolute;
+  width: inherit;
+  display: flex;
+}
+
+main .music-name p {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--White);
+}
+
+main .track {
+  width: 300px;
+  height: 7px;
+  background-color: var(--Orange);
+}
+
+main .track .time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--Very-Dark-Blue);
+  height: inherit;
+  width: 0%;
+}
+main .track:hover,
+main .track .time:hover {
+cursor: pointer;
+}
+
+main .container,
+main .container .img,
+main .container .img img,
+main .track,
+main .track .time {
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+}
+main .buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
+}
+main .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  font-size: 35px;
+  color: var(--White);
+  background-color: var(--Very-Dark-Blue);
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+main .buttons button:hover {
+  background-color: var(--Orange);
+}
+
+@media screen and (max-width: 450px) {
+  main .container {
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    padding: 10px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+}

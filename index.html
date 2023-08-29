@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="././css/style.css">
+  <title>Music App</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+
+      <div class="img">
+        <div class="buttons">
+          <button class="five-sec-btn sub"><i class="fa-solid fa-rotate-right fa-flip-horizontal"></i><span>5</span></button>
+          <button class="reload"><i class="fa-solid fa-rotate fa-spin"></i></button>
+          <button class="five-sec-btn plus"><i class="fa-solid fa-rotate-right"></i><span>5</span></button>
+        </div>
+        <img src="./images/Screen.png" alt="" srcset="">
+      </div>
+      
+      <div class="music-name">
+        <p>STARGAZING</p>
+      </div>
+  
+      <audio class="play" id="player" src="./music/Travis-Scott-STARGAZING.mp3" type="audio/mpeg"></audio>
+
+      <div class="track">
+        <span class="time"></span>
+      </div>
+      
+      <div class="buttons"> 
+        <button class="btn-next-and-back back"><i class="fa-solid fa-backward"></i></button>
+        <button class="btn-pause"><i class="fa-solid fa-play"></i></button>
+        <button class="btn-next-and-back next"><i class="fa-solid fa-forward"></i></button>
+      </div>
+    </div>
+  </main>
+  
+  <script src="./script/script.js"></script>
+</body>
+</html>
